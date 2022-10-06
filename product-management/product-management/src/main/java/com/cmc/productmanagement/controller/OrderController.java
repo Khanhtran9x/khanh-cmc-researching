@@ -2,8 +2,6 @@ package com.cmc.productmanagement.controller;
 
 import com.cmc.productmanagement.constants.KafkaConstants;
 import com.cmc.productmanagement.entity.OrderEntity;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,7 +13,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @CrossOrigin("*")
-public class ProductController {
+public class OrderController {
     @Autowired
     private KafkaTemplate<String, OrderEntity> kafkaTemplate;
 
