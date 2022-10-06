@@ -17,7 +17,7 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
-public class ListenerConfig{
+public class KafkaConsumerConfig {
     @Bean
     ConcurrentKafkaListenerContainerFactory<String, OrderEntity> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, OrderEntity> factory = new ConcurrentKafkaListenerContainerFactory<>();

@@ -17,7 +17,7 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
-public class ProducerConfiguration {
+public class KafkaProducerConfiguration {
     @Bean
     public ProducerFactory<String, OrderEntity> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfigurations());
