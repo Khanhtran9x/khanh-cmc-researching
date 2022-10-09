@@ -80,7 +80,7 @@ public class BatchConfig  extends DefaultBatchConfigurer {
     @Bean
     public JdbcBatchItemWriter<OrderEntity> writer(DataSource dataSource) {
         return new JdbcBatchItemWriterBuilder<OrderEntity>().itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-                .sql("INSERT INTO order_entity (product_name, numbers_of_product) VALUES (:productName, :numbersOfProduct)")
+                .sql("INSERT INTO product_order (product_name, numbers_of_product) VALUES (:productName, :numbersOfProduct)")
                 .dataSource(dataSource)
                 .build();
     }
