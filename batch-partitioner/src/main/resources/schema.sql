@@ -1,13 +1,13 @@
-CREATE TABLE customer (
-                          id INT PRIMARY KEY,
-                          firstName VARCHAR(255) NULL,
-                          lastName VARCHAR(255) NULL,
-                          birthdate VARCHAR(255) NULL
+CREATE TABLE public.new_avocado (
+	id int4 NOT NULL,
+	average_price float8 NULL,
+	total_volume float8 NULL,
+	"year" int4 NULL,
+	CONSTRAINT new_avocado_pkey PRIMARY KEY (id)
 );
 
-CREATE TABLE new_customer (
-                              id INT PRIMARY KEY,
-                              firstName VARCHAR(255) NULL,
-                              lastName VARCHAR(255) NULL,
-                              birthdate VARCHAR(255) NULL
-);
+SELECT COUNT(id)
+FROM avocado a;
+
+SELECT COUNT(id)
+FROM new_avocado na;
