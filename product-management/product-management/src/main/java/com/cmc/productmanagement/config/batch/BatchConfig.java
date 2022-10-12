@@ -66,6 +66,7 @@ public class BatchConfig  extends DefaultBatchConfigurer {
 
     @Bean(name = "reader")
     KafkaItemReader<OrderEntity, OrderEntity> kafkaItemReader() {
+        System.out.println("Data received from kafka topic");
         Properties props = new Properties();
         props.putAll(this.properties.buildConsumerProperties());
         return new KafkaItemReaderBuilder<OrderEntity, OrderEntity>()

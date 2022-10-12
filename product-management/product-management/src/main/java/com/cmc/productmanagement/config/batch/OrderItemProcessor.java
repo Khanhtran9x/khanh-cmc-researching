@@ -13,7 +13,7 @@ public class OrderItemProcessor implements ItemProcessor<OrderEntity, OrderEntit
 
     @Override
     public OrderEntity process(OrderEntity data) throws Exception {
-        System.out.println("data received from kafka");
+        System.out.println("data received from reader");
         System.out.println(data.getProductName());
         return data;
     }
