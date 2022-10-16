@@ -1,7 +1,7 @@
 package com.micro.productservice.service;
 
 import com.micro.productservice.VO.BrandEntity;
-import com.micro.productservice.VO.ResponseTemplate;
+import com.micro.productservice.VO.ProductBrandEntity;
 import com.micro.productservice.entity.ProductEntity;
 import com.micro.productservice.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +19,13 @@ public class ProductService {
         return productRepository.save(productEntity);
     }
 
-    public ResponseTemplate getProductWithBrandInfo(Long productId) {
-        ResponseTemplate responseTemplate = new ResponseTemplate();
+    public ProductBrandEntity getProductWithBrandInfo(Long productId) {
+        ProductBrandEntity productBrandEntity = new ProductBrandEntity();
         ProductEntity productEntity = productRepository.findById(productId).get();
         BrandEntity brandEntity =
-                restTemplate.getForObject("http://localhost:9003/brands/" + productEntity.getBrandId(),BrandEntity.class);
-        responseTemplate.setProductEntity(productEntity);
-        responseTemplate.setBrandEntity(brandEntity);
-        return responseTemplate;
+                restTemplate.getForObject("http://BRAND-SERVICE/brands/" + productEntity.getBrandId(),BrandEntity.class);
+        productBrandEntity.setProductEntity(productEntity);
+        productBrandEntity.setBrandEntity(brandEntity);
+        return productBrandEntity;
     }
 }

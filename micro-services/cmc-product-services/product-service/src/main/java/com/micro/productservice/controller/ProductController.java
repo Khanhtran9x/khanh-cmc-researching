@@ -1,6 +1,6 @@
 package com.micro.productservice.controller;
 
-import com.micro.productservice.VO.ResponseTemplate;
+import com.micro.productservice.VO.ProductBrandEntity;
 import com.micro.productservice.entity.ProductEntity;
 import com.micro.productservice.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseTemplate getProductWithBrandInfo(@PathVariable("id") Long productId) {
+    public ProductBrandEntity getProductWithBrandInfo(@PathVariable("id") Long productId) {
         return productService.getProductWithBrandInfo(productId);
     }
 }

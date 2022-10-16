@@ -1,0 +1,35 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: PRODUCT-SERVICE
+                fallbackuri: forward:/productServiceFallBack
+        - id: BRAND-SERVICE
+          uri: lb://BRAND-SERVICE
+          predicates:
+            - Path=/brands/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: BRAND-SERVICE
+                fallbackuri: forward:/brandServiceFallBack
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
