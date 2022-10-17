@@ -2,9 +2,7 @@ package com.cmc.batchpartitioner.config;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.sql.DataSource;
-
 import com.cmc.batchpartitioner.entity.Avocado;
 import com.cmc.batchpartitioner.mapper.AvocadoRowMapper;
 import com.cmc.batchpartitioner.partitioner.ColumnRangePartitioner;
@@ -24,6 +22,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.SyncTaskExecutor;
 
 @Configuration
 public class JobConfiguration extends DefaultBatchConfigurer{
@@ -77,7 +76,6 @@ public class JobConfiguration extends DefaultBatchConfigurer{
         return reader;
     }
 
-
     @Bean
     @StepScope
     public JdbcBatchItemWriter<Avocado> avocadoItemWriter()
@@ -120,6 +118,14 @@ public class JobConfiguration extends DefaultBatchConfigurer{
     public Job job()
     {
         return jobBuilderFactory.get("job")
+                .start(step1())
+                .build();
+    }
+
+    @Bean
+    public Job job2()
+    {
+        return jobBuilderFactory.get("job1")
                 .start(step1())
                 .build();
     }

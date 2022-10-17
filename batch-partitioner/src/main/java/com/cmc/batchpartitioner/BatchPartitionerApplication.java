@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.sql.DataSource;
 import java.util.Date;
 
 @SpringBootApplication
@@ -35,6 +36,6 @@ public class BatchPartitionerApplication implements CommandLineRunner {
 
 		JobExecution execution = jobLauncher.run(job, jobParameters);
 
-		System.out.println("STATUS :: "+execution.getStatus());
+		System.out.println("STATUS :: " + execution.getStatus());
 	}
 }

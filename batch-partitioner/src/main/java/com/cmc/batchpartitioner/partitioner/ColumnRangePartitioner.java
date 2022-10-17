@@ -3,15 +3,21 @@ package com.cmc.batchpartitioner.partitioner;
 import java.util.HashMap;
 import java.util.Map;
 import javax.sql.DataSource;
+import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
+@Component
+@StepScope
 public class ColumnRangePartitioner implements Partitioner
 {
     private JdbcOperations jdbcTemplate;
+
     private String table;
+
     private String column;
 
     public void setTable(String table) {
@@ -29,6 +35,7 @@ public class ColumnRangePartitioner implements Partitioner
     @Override
     public Map<String, ExecutionContext> partition(int gridSize)
     {
+        System.out.println("count partitioner");
         int min = jdbcTemplate.queryForObject("SELECT MIN(" + column + ") FROM " + table, Integer.class);
 
         int max = jdbcTemplate.queryForObject("SELECT MAX(" + column + ") FROM " + table, Integer.class);
