@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="665d8cd6-688c-4b96-9e8e-8d5544b51e9d" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/ClassController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/StudentController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/entity/ClassEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/entity/StudentEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/repository/ClassRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/repository/StudentRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/ClassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/BatchPartitionerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/BatchPartitionerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/config/JobConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/config/JobConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/partitioner/ColumnRangePartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../batch-partitioner/src/main/java/com/cmc/batchpartitioner/partitioner/ColumnRangePartitioner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/StudentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
