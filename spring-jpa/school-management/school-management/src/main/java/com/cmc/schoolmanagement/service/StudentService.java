@@ -20,7 +20,11 @@ public class StudentService {
         return studentRepository.findById(id);
     }
 
-    public StudentEntity updateStudent(Long id, StudentEntity studentEntity) {
+    public StudentEntity updateStudent(StudentEntity studentEntity) {
         return studentRepository.save(studentEntity);
+    }
+
+    public void deleteStudents(Long id) {
+        studentRepository.deleteById(id);
     }
 }
