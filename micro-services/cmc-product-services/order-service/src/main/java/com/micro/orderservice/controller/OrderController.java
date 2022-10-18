@@ -1,5 +1,6 @@
 package com.micro.orderservice.controller;
 
+import com.micro.orderservice.VO.ResponseOrderEntity;
 import com.micro.orderservice.constants.KafkaConstants;
 import com.micro.orderservice.entity.OrderEntity;
 import com.micro.orderservice.service.OrderService;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
@@ -26,9 +28,19 @@ public class OrderController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping
+    public List<OrderEntity> getAllOrders() {
+        return orderService.getAllOrders();
+    }
+
+    @GetMapping("/complete-payment/{id}")
     public Boolean completePayment(@PathVariable Long id) {
         orderService.completePayment(id);
         return true;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseOrderEntity getOrderInfo(@PathVariable("id") Long id) {
+        return orderService.getOrderInfo(id);
     }
 }

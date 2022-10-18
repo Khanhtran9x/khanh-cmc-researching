@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Service
 public class ProductService {
     @Autowired
@@ -27,5 +29,9 @@ public class ProductService {
         productBrandEntity.setProductEntity(productEntity);
         productBrandEntity.setBrandEntity(brandEntity);
         return productBrandEntity;
+    }
+
+    public List<ProductEntity> getAllProduct() {
+        return productRepository.findAll();
     }
 }

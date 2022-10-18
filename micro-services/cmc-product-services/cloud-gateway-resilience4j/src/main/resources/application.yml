@@ -15,7 +15,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: PRODUCT-SERVICE
-                fallbackuri: forward:/productServiceFallBack
+                fallbackuri: forward:/serviceFallBack
         - id: BRAND-SERVICE
           uri: lb://BRAND-SERVICE
           predicates:
@@ -24,7 +24,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: BRAND-SERVICE
-                fallbackuri: forward:/brandServiceFallBack
+                fallbackuri: forward:/serviceFallBack
         - id: ORDER-SERVICE
           uri: lb://ORDER-SERVICE
           predicates:
@@ -33,7 +33,16 @@ spring:
             - name: CircuitBreaker
               args:
                 name: ORDER-SERVICE
-                fallbackuri: forward:/brandServiceFallBack
+                fallbackuri: forward:/serviceFallBack
+        - id: PAID-ORDER-SERVICE
+          uri: lb://PAID-ORDER-SERVICE
+          predicates:
+            - Path=/paid-orders/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: PAID-ORDER-SERVICE
+                fallbackuri: forward:/serviceFallBack
   lifecycle:
     timeout-per-shutdown-phase: 20s
 

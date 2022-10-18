@@ -5,6 +5,8 @@ import com.micro.brandservice.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/brands")
 public class BrandController {
@@ -19,5 +21,10 @@ public class BrandController {
     @GetMapping("/{id}")
     public BrandEntity getBrandById(@PathVariable("id") Long brandId) {
         return brandService.getBrandById(brandId);
+    }
+
+    @GetMapping
+    public List<BrandEntity> getAllBrands() {
+        return brandService.getALlBrands();
     }
 }

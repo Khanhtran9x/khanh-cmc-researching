@@ -2,7 +2,9 @@ package com.micro.orderservice.listener;
 
 import com.micro.orderservice.constants.KafkaConstants;
 import com.micro.orderservice.entity.OrderEntity;
+import com.micro.orderservice.entity.PaidOrderServerErrorEntity;
 import com.micro.orderservice.service.OrderService;
+import com.micro.orderservice.service.PaidOrderErrorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -18,6 +20,8 @@ public class OrderListener {
     @Autowired
     private OrderService orderService;
     @Autowired
+    private PaidOrderErrorService paidOrderErrorService;
+    @Autowired
     private KafkaTemplate<String, OrderEntity> kafkaTemplate;
 
     @KafkaListener(
@@ -27,9 +31,10 @@ public class OrderListener {
     public void listen(OrderEntity orderEntity) {
         log.info("Listening new order");
         if (!orderEntity.getPaymentStatus()) {
+            log.info("Order has not been paid yet, save to database");
             orderService.order(orderEntity);
         } else {
-            System.out.println("alo");
+            log.info("Order has been paid, sending to PaidOrderService");
             orderService.sendPaidOrder(orderEntity);
         }
     }

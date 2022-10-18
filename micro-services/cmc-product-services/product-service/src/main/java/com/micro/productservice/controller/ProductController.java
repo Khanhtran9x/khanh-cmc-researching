@@ -6,6 +6,8 @@ import com.micro.productservice.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -20,5 +22,10 @@ public class ProductController {
     @GetMapping("/{id}")
     public ProductBrandEntity getProductWithBrandInfo(@PathVariable("id") Long productId) {
         return productService.getProductWithBrandInfo(productId);
+    }
+
+    @GetMapping
+    public List<ProductEntity> getAllProduct() {
+        return productService.getAllProduct();
     }
 }

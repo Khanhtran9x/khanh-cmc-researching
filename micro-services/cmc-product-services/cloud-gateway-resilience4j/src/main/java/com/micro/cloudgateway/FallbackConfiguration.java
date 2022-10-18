@@ -12,10 +12,8 @@ public class FallbackConfiguration {
 	@Bean
 	public RouterFunction<ServerResponse> routerFunction() {
 		return RouterFunctions
-				.route(RequestPredicates.GET("/productServiceFallBack"), this::handleFallBack)
-				.andRoute(RequestPredicates.POST("/productServiceFallBack"), this::handleFallBack)
-				.andRoute(RequestPredicates.GET("/brandServiceFallBack"), this::handleFallBack)
-				.andRoute(RequestPredicates.POST("/brandServiceFallBack"), this::handleFallBack);
+				.route(RequestPredicates.GET("/serviceFallBack"), this::handleFallBack)
+				.andRoute(RequestPredicates.POST("/serviceFallBack"), this::handleFallBack);
 	}
 
 	public Mono<ServerResponse> handleFallBack(ServerRequest request) {
