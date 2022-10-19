@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@EnableEurekaClient
 public class BrandService {
     @Autowired
     private BrandRepository brandRepository;

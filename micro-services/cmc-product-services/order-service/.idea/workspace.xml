@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="665d8cd6-688c-4b96-9e8e-8d5544b51e9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../brand-service/src/main/java/com/micro/brandservice/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../brand-service/src/main/java/com/micro/brandservice/service/BrandService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/SchoolManagementApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/ClassController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/entity/ClassEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/entity/StudentEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/repository/ClassRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/repository/StudentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/ClassService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/java/com/cmc/schoolmanagement/service/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../spring-jpa/school-management/school-management/src/test/java/com/cmc/schoolmanagement/SchoolManagementApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/micro/productservice/constants/KafkaConstants.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Project/khanh-cmc-researching/micro-services/cmc-product-services/order-service",
+    "last_opened_file_path": "D:/Project/khanh-cmc-researching/micro-services/cmc-product-services/paid-order-service",
     "spring.configuration.checksum": "be899d1f7f4b1410455bc8ef6b0605f0"
   }
 }]]></component>
@@ -117,6 +102,7 @@
       <workItem from="1666059816766" duration="4787000" />
       <workItem from="1666064650299" duration="1281000" />
       <workItem from="1666088514119" duration="1437000" />
+      <workItem from="1666147227061" duration="2704000" />
     </task>
     <servers />
   </component>
