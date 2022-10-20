@@ -12,6 +12,10 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.annotation.PartitionOffset;
+import org.springframework.kafka.annotation.TopicPartition;
+import org.springframework.kafka.listener.ContainerProperties;
+import org.springframework.kafka.listener.MessageListener;
 import org.springframework.stereotype.Component;
 
 @Component
