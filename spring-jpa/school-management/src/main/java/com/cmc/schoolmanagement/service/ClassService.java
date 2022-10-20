@@ -1,7 +1,6 @@
 package com.cmc.schoolmanagement.service;
 
 import com.cmc.schoolmanagement.entity.ClassEntity;
-import com.cmc.schoolmanagement.entity.StudentEntity;
 import com.cmc.schoolmanagement.repository.ClassRepository;
 import com.cmc.schoolmanagement.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class ClassService {
@@ -36,10 +34,5 @@ public class ClassService {
 
     public Optional<ClassEntity> getClassById(Long id) {
         return classRepository.findById(id);
-    }
-
-    public Set<StudentEntity> getStudentsInClass(Long id) {
-        Set<StudentEntity> studentEntities = studentRepository.getStudentsInClass(id);
-        return null;
     }
 }

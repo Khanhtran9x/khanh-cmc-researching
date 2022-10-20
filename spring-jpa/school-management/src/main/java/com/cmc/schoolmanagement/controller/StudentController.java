@@ -30,7 +30,6 @@ public class StudentController {
     public ResponseEntity<StudentEntity> getStudentById(@PathVariable Long id) {
         Optional<StudentEntity> studentEntity = studentService.findById(id);
         return studentEntity.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND):new ResponseEntity<>(studentEntity.get(), HttpStatus.OK);
-
     }
 
     @PutMapping

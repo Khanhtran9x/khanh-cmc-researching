@@ -34,11 +34,6 @@ public class ClassController {
         return classEntity.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND):new ResponseEntity<>(classEntity.get(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}/students")
-    public ResponseEntity<Set<StudentEntity>> getStudentsInClass(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(classService.getStudentsInClass(id), HttpStatus.OK);
-    }
-
     @PutMapping
     public ResponseEntity<ClassEntity> updateClass(@RequestBody ClassEntity classEntity) {
         return new ResponseEntity<>(classService.updateClass(classEntity), HttpStatus.OK);
