@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="665d8cd6-688c-4b96-9e8e-8d5544b51e9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../brand-service/src/main/java/com/micro/brandservice/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../brand-service/src/main/java/com/micro/brandservice/service/BrandService.java" afterDir="false" />
+    <list default="true" id="665d8cd6-688c-4b96-9e8e-8d5544b51e9d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../brand-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-config-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-gateway-resilience4j/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../brand-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../brand-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-gateway-resilience4j/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-gateway-resilience4j/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/micro/productservice/constants/KafkaConstants.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +71,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Project/khanh-cmc-researching/micro-services/cmc-product-services/paid-order-service",
+    "last_opened_file_path": "D:/Project/khanh-cmc-researching/micro-services/cmc-product-services/order-service",
     "spring.configuration.checksum": "be899d1f7f4b1410455bc8ef6b0605f0"
   }
 }]]></component>
@@ -103,6 +114,10 @@
       <workItem from="1666064650299" duration="1281000" />
       <workItem from="1666088514119" duration="1437000" />
       <workItem from="1666147227061" duration="2704000" />
+      <workItem from="1666664539106" duration="1552000" />
+      <workItem from="1666748369764" duration="2325000" />
+      <workItem from="1666772958751" duration="3305000" />
+      <workItem from="1666837800856" duration="15000" />
     </task>
     <servers />
   </component>
@@ -114,10 +129,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

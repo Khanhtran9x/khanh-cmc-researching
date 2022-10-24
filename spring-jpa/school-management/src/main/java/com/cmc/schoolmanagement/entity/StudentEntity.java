@@ -19,6 +19,7 @@ public class StudentEntity {
     private String studentCode;
     private String studentFirstName;
     private String studentLastName;
+
     @Column(columnDefinition = "DATE")
     private String studentDateOfBirth;
     private String studentEmail;

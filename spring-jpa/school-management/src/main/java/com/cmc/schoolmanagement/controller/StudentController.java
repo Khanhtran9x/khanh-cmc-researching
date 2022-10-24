@@ -12,12 +12,14 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/students")
+@CrossOrigin("*")
 public class StudentController {
     @Autowired
     private StudentService studentService;
 
     @PostMapping
     public ResponseEntity<StudentEntity> addNewStudent(@RequestBody StudentEntity studentEntity) {
+        System.out.println(studentEntity);
         return new ResponseEntity<>(studentService.saveStudent(studentEntity), HttpStatus.CREATED);
     }
 
