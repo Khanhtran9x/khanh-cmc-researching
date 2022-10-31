@@ -20,4 +20,13 @@ public class ClassEntity {
     @OneToMany(mappedBy = "classEntity")
     @JsonIgnore
     private Set<StudentEntity> studentEntities;
+
+    public ClassEntity(Long classId, String className) {
+        this.classId = classId;
+        this.className = className;
+    }
+
+    public ClassEntity(String className) {
+        this.className = className;
+    }
 }

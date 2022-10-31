@@ -1,0 +1,45 @@
+version: '3.5'
+services:
+  discovery:
+    image: khanhcmc/eureka-server
+    container_name: eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+
+  gateway:
+    image: khanhcmc/cloud-gateway
+    container_name: cloud-gateway
+    build:
+      context: ./cloud-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "9191:9191"
+    environment:
+      CLOUD_CONFIG_URI: http://cloud-config-server:9296
+    links:
+      - cloud-config-server:cloud-config-server
+
+  brand-service:
+    image: khanhcmc/brand-service
+    container_name: brand-service
+    build:
+      context: ./brand-service
+      dockerfile: Dockerfile
+    ports:
+      - "9003:9003"
+    environment:
+      CLOUD_CONFIG_URI: http://cloud-config-server:9296
+    links:
+      - cloud-config-server:cloud-config-server
+
+  cloud-config-server:
+    image: khanhcmc/cloud-config-server
+    container_name: cloud-config-server
+    build:
+      context: ./cloud-config-server
+      dockerfile: Dockerfile
+    ports:
+      - "9296:9296"

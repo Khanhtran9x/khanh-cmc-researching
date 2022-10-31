@@ -35,4 +35,8 @@ public class ClassService {
     public Optional<ClassEntity> getClassById(Long id) {
         return classRepository.findById(id);
     }
+
+    public ClassEntity getClassByName(String className) {
+        return classRepository.findByClassName(className);
+    }
 }
