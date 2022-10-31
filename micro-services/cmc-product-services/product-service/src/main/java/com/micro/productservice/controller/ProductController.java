@@ -20,7 +20,8 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ProductBrandEntity getProductWithBrandInfo(@PathVariable("id") Long productId) {
+    public ProductBrandEntity getProductWithBrandInfo(@PathVariable("id") Long productId) throws InterruptedException {
+        Thread.sleep(5000);
         return productService.getProductWithBrandInfo(productId);
     }
 

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/order-service.iml" filepath="$PROJECT_DIR$/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orderservice.iml" filepath="$PROJECT_DIR$/orderservice.iml" />
     </modules>
   </component>
 </project>
